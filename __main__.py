@@ -2,7 +2,7 @@ import os
 
 ### Entity format (data type can be String, boolean, Long, int, double, or LocalDate).
 ### Attribute names are always lower case except
-## Dont write the id attribute, it is generated automatically
+### Dont write the id attribute, it is generated automatically
 """
 entities = [
     {
@@ -14,6 +14,27 @@ entities = [
         ],
     },
     # Add more entities as needed
+]
+"""
+### Example entities
+"""
+entities = [
+    {
+        "entityName": "Dessert",
+        "attributes": [
+            ["String", "name"],
+            ["int", "preparation"],
+            ["String", "difficulty"],
+        ],
+    },
+    {
+        "entityName": "Ingredient",
+        "attributes": [
+            ["String", "name"],
+            ["int", "quantity"],
+            ["Dessert", "dessert"],
+        ],
+    },
 ]
 """
 ### My entities
